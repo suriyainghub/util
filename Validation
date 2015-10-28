@@ -6,14 +6,12 @@ final class Validation
         /*
         * METHOD TO CHECK INPUT IS NUMBER OR NOT
         */
-        public  static <T> boolean isNumber(T input)
+       public  static  boolean isNumber(String input)
         {
           try{
-                if(Ineger.parseInt(input))
-                  {
-                     return true;
-                  }
+                 Integer.parseInt((String)input);
                   
+                     return true;
              }catch(NumberFormatException nfe)
              {
                   return false;
