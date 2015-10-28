@@ -6,17 +6,18 @@ final class Validation
         /*
         * METHOD TO CHECK INPUT IS NUMBER OR NOT
         */
-       public  static  boolean isNumber(String input)
-        {
-          try{
-                 Integer.parseInt((String)input);
-                  
-                     return true;
-             }catch(NumberFormatException nfe)
-             {
-                  return false;
-             }
-        
-        }
- 
+       public static boolean isNumber(final String input) {
+
+           		boolean flag;
+           
+           		try {
+           			Integer.parseInt((String) input);
+           
+           			flag = true;
+           		} catch (NumberFormatException nfe) {
+           			flag = false;
+           		}
+           
+           		return flag;
+	        }
 }
